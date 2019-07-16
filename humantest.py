@@ -82,6 +82,14 @@ def test_humanity():
             return True
         else:
             return False
+    elif test == 3:
+        lst1 = ["The Earth is the closest planet to the sun.", "The grass is green.", "The sun is cold.", "four minus three is one.", "Ten plus two is five", "Cats usually walk on only two legs.", "Ants are smaller than tigers."]
+        lst2 = [False, True, False, True, False, False, True]
+
+        ind = rand.randrange(0, len(lst1), 1)
+
+        print("Respond with true or false")
+        print(lst1[ind])
 
 
 
