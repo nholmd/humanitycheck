@@ -1,8 +1,8 @@
 import random as rand
 
 def test_humanity():
-    test = rand.randrange(0, 3, 1)
-    # test = 2
+    test = rand.randrange(0, 4, 1)
+    test = 3
     if test == 0:
         # Wordy Math
         nums = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
@@ -83,13 +83,18 @@ def test_humanity():
         else:
             return False
     elif test == 3:
-        lst1 = ["The Earth is the closest planet to the sun.", "The grass is green.", "The sun is cold.", "four minus three is one.", "Ten plus two is five", "Cats usually walk on only two legs.", "Ants are smaller than tigers."]
-        lst2 = [False, True, False, True, False, False, True]
+        lst1 = ["The Earth is the closest planet to the sun.", "Ice is cold.", "The sun is cold.", "four minus three is one.", "Ten plus two is five", "Cats usually walk on only two legs.", "Ants are smaller than tigers."]
+        lst2 = ["false", "true", "false", "true", "false", "false", "true"]
 
         ind = rand.randrange(0, len(lst1), 1)
 
         print("Respond with true or false")
         print(lst1[ind])
+        response = input()
+        if response == lst2[ind]:
+            return True
+        else:
+            return False
 
 
 
