@@ -2,7 +2,7 @@ import random as rand
 
 def test_humanity():
     test = rand.randrange(0, 4, 1)
-    test = 3
+    # test = 3
     if test == 0:
         # Wordy Math
         nums = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
