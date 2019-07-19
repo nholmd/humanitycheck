@@ -1,8 +1,10 @@
 import random as rand
 
+num_tests = 5
+
 def test_humanity():
-    test = rand.randrange(0, 4, 1)
-    # test = 3
+    test = rand.randrange(0, num_tests, 1)
+    # test = 4
     if test == 0:
         # Wordy Math
         nums = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
@@ -65,8 +67,8 @@ def test_humanity():
         else:
             return False
     elif test == 2:
-        lst1 = ["hot", "small", "happy", "short", "fast"]
-        lst2 = ["cold", "big", "sad", "tall", "slow"]
+        lst1 = ["hot", "small", "happy", "short", "fast", "dangerous", "easy", "dark", "end", "alive", "night", "false", "empty"]
+        lst2 = ["cold", "big", "sad", "tall", "slow", "safe", "difficult", "light", "begin", "dead", "day", "true", "full"]
         size = len(lst1)
 
         ind = rand.randrange(0, size, 1)
@@ -95,11 +97,21 @@ def test_humanity():
             return True
         else:
             return False
+    elif test == 4:
+        lst1 = ["cow", "fight", "sustain", "build", "smile", "dog", "god", "green", "blue", "plant", "planet", "happy", "sad", "innocent"]
+
+        print("Please type this word in reverse:")
+        ind = rand.randrange(0, len(lst1), 1)
+        print(lst1[ind])
+        response = input()
+        if response[::-1] == lst1[ind]:
+            return True
+        else:
+            return False
 
 
 
-        
-            
+
 
 #  Code
 pas = True
@@ -108,7 +120,7 @@ while tests > 0:
     tests -= 1
     if not test_humanity():
         pas = False
-    print()
+    print("")
 
 if pas:
     print("You are human")
